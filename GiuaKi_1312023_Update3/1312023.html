@@ -1,0 +1,1115 @@
+﻿<!--1312023_Bai Giua Ki-->
+ <!DOCTYPE html>
+<html ng-app = "1312023_CV">
+	<head>
+		<!-- Latest compiled and minified CSS -->  
+		<link rel="stylesheet" href="css/bootstrap.css">  
+		<!-- jQuery library -->  
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  
+		<!-- Latest compiled JavaScript -->  
+		<script src="js/bootstrap.js"></script>  
+		<script src="angularjs/angular.min.js"></script>
+    <script src="angularjs/angular-animate.js"></script>
+    <script src="angularjs/angular-material-icons.min.js"></script>
+	<script src = "js/functionName.js"></script>
+		<link rel = "stylesheet" href = "1312023_style.css"/>
+		<meta charset = "utf-8"/>
+	</head>
+	<body ng-controller="ctr">
+		<div class = "Entire">
+		<div class = "Content">
+		<div id = "top-card">
+			<div class = "profile-top-card">
+				<div class = "col-md-3">
+					<img src = "images/1312023.png" alt "profile"/>
+				</div>
+				
+				<div class = "col-md-9">
+						
+						
+						
+						<div class = "profile-overview-content">
+							<div class = "member">
+							
+							<div class = "NameCont" ng-hide = "editorEnabled">
+							{{Name}}
+							 <a href="#stay_here" ng-click="enableEditor()">Edit</a>
+							</div>
+							<div class="NameCont" ng-show="editorEnabled">
+			<input ng-model="editableTitle" ng-show="editorEnabled">
+			<a href="#stay_here" ng-click="save()">Save</a> or <a href="#stay_here" ng-click="disableEditor()">cancel</a>.  
+		</div>
+						
+
+						
+							<div class = "University" ng-hide = "editorEnabledUniversity">
+							{{University}}
+							 <a href="#stay_here" ng-click="enableEditorUniversity()">Edit</a>
+							</div>
+							<div class="University" ng-show="editorEnabledUniversity">
+			<input ng-model="editableUniversity" ng-show="editorEnabledUniversity">
+			<a href="#stay_here" ng-click="saveUniversity()">Save</a> or <a href="#stay_here" ng-click="disableEditorUniversity()">cancel</a>.  
+		</div>
+							
+
+							<div class = "Locate" ng-hide = "editorEnabledLocate">
+							{{Locate}}
+							 <a href="#stay_here" ng-click="enableEditorLocate()">Edit</a>
+							</div>
+							<div class="Locate" ng-show="editorEnabledLocate">
+			<input ng-model="editableLocate" ng-show="editorEnabledLocate">
+			<a href="#stay_here" ng-click="saveLocate()">Save</a> or <a href="#stay_here" ng-click="disableEditorLocate()">cancel</a>.  
+		</div>
+							
+							
+							
+							</div>
+						<div class = "info-table">
+							<table>
+							<col width = "120">
+							<col width = "350">
+							<tr>
+								<td>Current</td>
+								<td><div class="Current" ng-hide="editorEnabledCurrent">
+    {{Current}}
+    <a href="#stay_here" ng-click="enableEditorCurrent()">Edit</a>
+</div>
+<div class="Current" ng-show="editorEnabledCurrent">
+    <input ng-model="editableCurrent" ng-show="editorEnabledCurrent">
+    <a href="#stay_here" ng-click="saveCurrent()">Save</a> or <a href="#stay_here" ng-click="disableEditorCurrent()">cancel</a>.
+</div></td>
+							</tr>
+								
+							<tr>
+								<td>Previous</td>
+								<td><div class="Previous" ng-hide="editorEnabledPrevious">
+    {{Previous}}
+    <a href="#stay_here" ng-click="enableEditorPrevious()">Edit</a>
+</div>
+<div class="Previous" ng-show="editorEnabledPrevious">
+    <input ng-model="editablePrevious" ng-show="editorEnabledPrevious">
+    <a href="#stay_here" ng-click="savePrevious()">Save</a> or <a href="#stay_here" ng-click="disableEditorPrevious()">cancel</a>.
+</div></td>
+							</tr>
+								
+							<tr>
+								<td>Education</td>
+								<td><div class="Edu" ng-hide="editorEnabledEducation">
+    {{Education}}
+    <a href="#stay_here" ng-click="enableEditorEducation()">Edit</a>
+</div>
+<div class="Edu" ng-show="editorEnabledEducation">
+    <input ng-model="editableEducation" ng-show="editorEnabledEducation">
+    <a href="#stay_here" ng-click="saveEducation()">Save</a> or <a href="#stay_here" ng-click="disableEditorEducation()">cancel</a>.
+</div>
+   </td>
+							</tr>
+							</table>
+							<table>
+							<col width = "30">
+							<col width = "460">
+							<col width = "40">
+							<tr>
+								<td><img src = "images/button.png" alt "button"/></td>
+								<td>
+								
+								<h5>Know Ân?</h5>
+								<h6><a href = "#stay_here">Connect</a> </h6>
+								
+								</td>
+								<td>
+								<h5>{{followers}}</h5>
+								<h6>followers</h6>
+								</td>
+							</tr>
+							</table>
+						</div>
+						</div>
+						</div>
+			</div>
+			</div>
+			<div class = "profile-card-extras">
+				<div class = "col-md-10">
+                    <div class="Link_contact" ng-hide="editorEnabledLink_contact">
+                        <a href="#stay_here">{{Link_contact}}</a>
+                        <a href="#stay_here" ng-click="enableEditorLink_contact()"><u>Edit</u></a>
+                    </div>
+                    <div class="Link_contact" ng-show="editorEnabledLink_contact">
+                        <input ng-model="editableLink_contact" ng-show="editorEnabledLink_contact">
+                        <a href="#stay_here" ng-click="saveLink_contact()">Save</a> or <a href="#stay_here" ng-click="disableEditorLink_contact()">cancel</a>.
+                    </div>
+                    
+				</div>
+				
+				<div class = "col-md-2">
+					<a href = "#stay_here">Contact info</a>
+				</div>
+			</div>
+		</div>	
+		<div id = "background" class = "profile-background">
+			<h2>Background</h2>
+			<div class = "background-content">
+			<div id = "background-summary-container" class = "background section"></div>
+				<div id = "background-summary" class = "background-summary edit-default">
+					<div class = "summary-header">
+						<table>
+						<col width = "30">
+						<col width = "80">
+						<tr>
+						<td>
+						<img src = "images/square.png" alt "symbol">
+						</td>
+						<td>
+						<h3>
+							Summary 
+						</h3>
+						</td>
+						</tr>
+						</table>
+					</div>	
+						
+							<div class = "summary-description">
+                                <div class="summary" ng-hide="editorEnabledsummary">
+                                    <p>
+                                        {{summary}}
+
+                                    </p>
+                                    <a href="#stay_here" ng-click="enableEditorsummary()"><u>Edit</u></a>
+                                </div>
+                                <div class="summary" ng-show="editorEnabledsummary">
+                                    <input ng-model="editablesummary" ng-show="editorEnabledsummary" class="input-size">
+                                    <a href="#stay_here" ng-click="savesummary()">Save</a> or <a href="#stay_here" ng-click="disableEditorsummary()">cancel</a>.
+                                </div>
+                                	
+			
+			
+		</div>
+		</div>
+		<hr>
+		<div class = "Experience">
+			
+			<div id = "title-experience">
+				<table>
+						<col width = "30">
+						<col width = "80">
+						<tr>
+						<td>
+						<img src = "images/square.png" alt "symbol"/>
+						</td>
+						<td>
+						<h3>
+							Experience 
+						</h3>
+						</td>
+						</tr>
+						</table>
+			</div>
+			<div class = "Student-now">
+				<div class = "student-live">
+					<div class = "col-md-9">
+                        <div class="part_student" ng-hide="editorEnabledpart_student">
+                                                            <table>
+                                                                <col width= "80">
+                                                                <col width=" 50">
+                                    <tr>
+                                        <td><h4> {{part_student}} </h4>
+                                            </td>
+                                        <td><a href="#stay_here" ng-click="enableEditorpart_student()"><u>Edit</u></a>
+                                            </td>
+                                        </tr>
+                                </table>
+
+                            
+                            
+                        </div>
+                        <div class="part_student" ng-show="editorEnabledpart_student">
+                            <input ng-model="editablepart_student" ng-show="editorEnabledpart_student" class="input-size">
+                            <a href="#stay_here" ng-click="savepart_student()">Save</a> or <a href="#stay_here" ng-click="disableEditorpart_student()">cancel</a>.
+                        </div>
+						
+                        <div class="Address_student" ng-hide="editorEnabledAddress_student">
+                            <table>
+                                <col width="280">
+                                <col width=" 50">
+                                <tr>
+                                    <td>
+                                        <h5> {{Address_student}}	</h5>                                    </td>
+                                    <td>
+                                        <a href="#stay_here" ng-click="enableEditorAddress_student()"><u>Edit</u></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="Address_student" ng-show="editorEnabledAddress_student">
+                            <input ng-model="editableAddress_student" ng-show="editorEnabledAddress_student" class="input-size">
+                            <a href="#stay_here" ng-click="saveAddress_student()">Save</a> or <a href="#stay_here" ng-click="disableEditorAddress_student()">cancel</a>.
+                        </div>
+
+                        <div class="time_student" ng-hide="editorEnabledtime_student">
+                            <table>
+                                <col width="280">
+                                <col width=" 50">
+                                <tr>
+                                    <td>
+                                        <h6>{{time_student}}</h6>
+                                    </td>
+                                    <td>
+                                        <a href="#stay_here" ng-click="enableEditortime_student()"><u>Edit</u></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="time_student" ng-show="editorEnabledtime_student">
+                            <input ng-model="editabletime_student" ng-show="editorEnabledtime_student" class="input-size">
+                            <a href="#stay_here" ng-click="savetime_student()">Save</a> or <a href="#stay_here" ng-click="disableEditortime_student()">cancel</a>.
+                        </div>
+    						
+					</div>
+					
+					<div class = "col-md-3">
+						<img src = "images/logo-khtn-small.png" width = "100" height = "100" alt "logo"/>
+					</div>
+				</div>
+				<div class = "student-live-description">
+                    <div class="content_student" ng-hide="editorEnabledcontent_student">
+                        
+                                    <p>{{content_student}}</p>
+                                    <a href="#stay_here" ng-click="enableEditorcontent_student()"><u>Edit</u></a>
+                        
+
+
+                    </div>
+                    <div class="content_student" ng-show="editorEnabledcontent_student">
+                        <input ng-model="editablecontent_student" ng-show="editorEnabledcontent_student" class="input-size">
+                        <a href="#stay_here" ng-click="savecontent_student()">Save</a> or <a href="#stay_here" ng-click="disableEditorcontent_student()">cancel</a>.
+                    </div>
+
+                   				</div>
+			</div>
+			<div id = "Example-pictures">
+				<div class = "pictures-list1">
+					<div class = "col-md-6">
+					<div class = "picture"><center>
+						<a href="#stay_here">
+<img src="images/logo-khtn.png" alt="" width="242" height="162" border="0"></center> 
+</a>				</div>	
+					</div>
+					
+					<div class = "col-md-6">
+					<div class = "picture">
+					<center><a href="http://www.google.com"><img src="images/fit.jpg" alt="Go to W3Schools!" width="342" height="162" border="0">
+</a></center>				</div>
+
+					</div>
+				</div>
+				<br><br><p></p>
+				<div class = "pictures-list2">
+					<div class = "col-md-4">
+					<div class = "picture">
+					<a href="http://www.google.com">
+					<center>
+					<img  src="images/khtn.jpg" alt="Go to W3Schools!" width="242" height="160" border="0"></center>
+</a>				</div>
+				</div>
+				
+					<div class = "col-md-4">
+					<div class = "picture">
+						<a href="http://www.google.com">
+						<center>
+						<img  src="images/1312023_andFriend.jpg" alt="Go to W3Schools!" width="260" height="160" border="0"></center>
+</a>				</div>
+					</div>
+					
+					<div class = "col-md-4">
+					<div class = "picture">
+						
+						<a href="http://www.google.com">
+						<center><img  src="images/God-is-love.jpg" alt="Go to W3Schools!" width="260" height="160" border="0"></center>
+</a>				
+					
+			
+				</div>
+					
+			</div>
+			<div id = "see-more">
+			<a href = "#stay_here">See more</a>
+			
+			</div>
+			
+		</div>
+                <div class="primary-school">
+                    <div class="Secondary-school">
+                        <div class="col-md-9">
+                            <div class="part_primary_school" ng-hide="editorEnabledpart_primary_school">
+                                <table>
+                                    <col width="280">
+                                    <col width=" 50">
+                                    <tr>
+                                        <td>
+                                            <h5>{{part_primary_school}}</h5>
+                                        </td>
+                                        <td>
+                                            <a href="#stay_here" ng-click="enableEditorpart_primary_school()"><u>Edit</u></a>
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+
+                            </div>
+                            <div class="part_primary_school" ng-show="editorEnabledpart_primary_school">
+                                <input ng-model="editablepart_primary_school" ng-show="editorEnabledpart_primary_school" class="input-size">
+                                <a href="#stay_here" ng-click="savepart_primary_school()">Save</a> or <a href="#stay_here" ng-click="disableEditorpart_primary_school()">cancel</a>.
+                            </div>
+                            
+
+                            <div class="primary_school" ng-hide="editorEnabledprimary_school">
+                                <table>
+                                    <col width="280">
+                                    <col width=" 50">
+                                    <tr>
+                                        <td>
+                                            <h4>{{primary_school}}</h4>                                        </td>
+                                        <td>
+                                            <a href="#stay_here" ng-click="enableEditorprimary_school()"><u>Edit</u></a>
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+
+                            </div>
+                            <div class="primary_school" ng-show="editorEnabledprimary_school">
+                                <input ng-model="editableprimary_school" ng-show="editorEnabledprimary_school" class="input-size">
+                                <a href="#stay_here" ng-click="saveprimary_school()">Save</a> or <a href="#stay_here" ng-click="disableEditorprimary_school()">cancel</a>.
+                            </div>
+                            
+
+                            <div class="time_primary_school" ng-hide="editorEnabledtime_primary_school">
+                                <table>
+                                    <col width="280">
+                                    <col width=" 50">
+                                    <tr>
+                                        <td>
+                                            <h5>{{time_primary_school}}</h5>
+                                        </td>
+                                        <td>
+                                            <a href="#stay_here" ng-click="enableEditortime_primary_school()"><u>Edit</u></a>
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+
+                            </div>
+                            <div class="time_primary_school" ng-show="editorEnabledtime_primary_school">
+                                <input ng-model="editabletime_primary_school" ng-show="editorEnabledtime_primary_school" class="input-size">
+                                <a href="#stay_here" ng-click="savetime_primary_school()">Save</a> or <a href="#stay_here" ng-click="disableEditortime_primary_school()">cancel</a>.
+                            </div>
+
+                            </div>
+                           
+                        <div class="col-md-3">
+                            <img src="images/tieuhoc.jpg" width="100" height="100" alt "logo" />
+                        </div>
+                    </div>
+                        <div class="student-live-description">
+                            <div class="content_primary_school" ng-hide="editorEnabledcontent_primary_school">
+                                <table>
+                                    <col width="280">
+                                    <col width=" 50">
+                                    <tr>
+                                        <td>
+                                            <h6>{{content_primary_school}}</h6>
+                                        </td>
+                                        <td>
+                                            <a href="#stay_here" ng-click="enableEditorcontent_primary_school()"><u>Edit</u></a>
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+
+                            </div>
+                            <div class="content_primary_school" ng-show="editorEnabledcontent_primary_school">
+                                <input ng-model="editablecontent_primary_school" ng-show="editorEnabledcontent_primary_school" class="input-size">
+                                <a href="#stay_here" ng-click="savecontent_primary_school()">Save</a> or <a href="#stay_here" ng-click="disableEditorcontent_primary_school()">cancel</a>.
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+			
+			<div class = "Secondary-School-live">
+				<div class = "Secondary-school">
+					<div class = "col-md-9">
+                        <div class="part_secondary_school" ng-hide="editorEnabledpart_secondary_school">
+                            <table>
+                                <col width="280">
+                                <col width=" 50">
+                                <tr>
+                                    <td>
+                                        <h4>{{part_secondary_school}}</h4>
+                                    </td>
+                                    <td>
+                                        <a href="#stay_here" ng-click="enableEditorpart_secondary_school()"><u>Edit</u></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="part_secondary_school" ng-show="editorEnabledpart_secondary_school">
+                            <input ng-model="editablepart_secondary_school" ng-show="editorEnabledpart_secondary_school" class="input-size">
+                            <a href="#stay_here" ng-click="savepart_secondary_school()">Save</a> or <a href="#stay_here" ng-click="disableEditorpart_secondary_school()">cancel</a>.
+                        </div>
+
+
+                        <div class="secondary_school" ng-hide="editorEnabledsecondary_school">
+                            <table>
+                                <col width="280">
+                                <col width=" 50">
+                                <tr>
+                                    <td>
+                                        <h4>{{secondary_school}}</h4>
+                                    </td>
+                                    <td>
+                                        <a href="#stay_here" ng-click="enableEditorsecondary_school()"><u>Edit</u></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="secondary_school" ng-show="editorEnabledsecondary_school">
+                            <input ng-model="editablesecondary_school" ng-show="editorEnabledsecondary_school" class="input-size">
+                            <a href="#stay_here" ng-click="savesecondary_school()">Save</a> or <a href="#stay_here" ng-click="disableEditorsecondary_school()">cancel</a>.
+                        </div>
+
+                        <div class="address_secondary_school" ng-hide="editorEnabledaddress_secondary_school">
+                            <table>
+                                <col width="280">
+                                <col width=" 50">
+                                <tr>
+                                    <td>
+                                        <h4>{{address_secondary_school}}</h4>
+                                    </td>
+                                    <td>
+                                        <a href="#stay_here" ng-click="enableEditoraddress_secondary_school()"><u>Edit</u></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="address_secondary_school" ng-show="editorEnabledaddress_secondary_school">
+                            <input ng-model="editableaddress_secondary_school" ng-show="editorEnabledaddress_secondary_school" class="input-size">
+                            <a href="#stay_here" ng-click="saveaddress_secondary_school()">Save</a> or <a href="#stay_here" ng-click="disableEditoraddress_secondary_school()">cancel</a>.
+                        </div>
+
+                        <div class="time_secondary_school" ng-hide="editorEnabledtime_secondary_school">
+                            <table>
+                                <col width="280">
+                                <col width=" 50">
+                                <tr>
+                                    <td>
+                                        <h4>{{time_secondary_school}}</h4>
+                                    </td>
+                                    <td>
+                                        <a href="#stay_here" ng-click="enableEditortime_secondary_school()"><u>Edit</u></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="time_secondary_school" ng-show="editorEnabledtime_secondary_school">
+                            <input ng-model="editabletime_secondary_school" ng-show="editorEnabledtime_secondary_school" class="input-size">
+                            <a href="#stay_here" ng-click="savetime_secondary_school()">Save</a> or <a href="#stay_here" ng-click="disableEditortime_secondary_school()">cancel</a>.
+                        </div>
+						
+						
+
+						
+					</div>
+					
+					<div class = "col-md-3">
+						<img src = "images/thcsNguyenDucUng.jpg" width = "100" height = "100" alt "logo"/>
+					</div>
+				</div>
+				<div class = "student-live-description">
+                    <div class="content_secondary_school" ng-hide="editorEnabledcontent_secondary_school">
+                                    <p>{{content_secondary_school}}</p>
+                                    <a href="#stay_here" ng-click="enableEditorcontent_secondary_school()"><u>Edit</u></a>
+  
+
+
+                    </div>
+                    <div class="content_secondary_school" ng-show="editorEnabledcontent_secondary_school">
+                        <input ng-model="editablecontent_secondary_school" ng-show="editorEnabledcontent_secondary_school" class="input-size">
+                        <a href="#stay_here" ng-click="savecontent_secondary_school()">Save</a> or <a href="#stay_here" ng-click="disableEditorcontent_secondary_school()">cancel</a>.
+                    </div>
+
+				</div>
+			</div>
+			
+			<div class = "Hight-School-live">
+				<div class = "Hight-school">
+					<div class = "col-md-9">
+                        <div class="part_hight_school" ng-hide="editorEnabledpart_hight_school">
+                            <table>
+                                <col width="280">
+                                <col width=" 50">
+                                <tr>
+                                    <td>
+                                        <h4>{{part_hight_school}}</h4>
+                                    </td>
+                                    <td>
+                                        <a href="#stay_here" ng-click="enableEditorpart_hight_school()"><u>Edit</u></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="part_hight_school" ng-show="editorEnabledpart_hight_school">
+                            <input ng-model="editablepart_hight_school" ng-show="editorEnabledpart_hight_school" class="input-size">
+                            <a href="#stay_here" ng-click="savepart_hight_school()">Save</a> or <a href="#stay_here" ng-click="disableEditorpart_hight_school()">cancel</a>.
+                        </div>
+
+
+                        <div class="hight_school" ng-hide="editorEnabledhight_school">
+                            <table>
+                                <col width="280">
+                                <col width=" 50">
+                                <tr>
+                                    <td>
+                                        <h4>{{hight_school}}</h4>
+                                    </td>
+                                    <td>
+                                        <a href="#stay_here" ng-click="enableEditorhight_school()"><u>Edit</u></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="hight_school" ng-show="editorEnabledhight_school">
+                            <input ng-model="editablehight_school" ng-show="editorEnabledhight_school" class="input-size">
+                            <a href="#stay_here" ng-click="savehight_school()">Save</a> or <a href="#stay_here" ng-click="disableEditorhight_school()">cancel</a>.
+                        </div>
+
+                        <div class="address_hight_school" ng-hide="editorEnabledaddress_hight_school">
+                            <table>
+                                <col width="280">
+                                <col width=" 50">
+                                <tr>
+                                    <td>
+                                        <h4>{{address_hight_school}}</h4>
+                                    </td>
+                                    <td>
+                                        <a href="#stay_here" ng-click="enableEditoraddress_hight_school()"><u>Edit</u></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="address_hight_school" ng-show="editorEnabledaddress_hight_school">
+                            <input ng-model="editableaddress_hight_school" ng-show="editorEnabledaddress_hight_school" class="input-size">
+                            <a href="#stay_here" ng-click="saveaddress_hight_school()">Save</a> or <a href="#stay_here" ng-click="disableEditoraddress_hight_school()">cancel</a>.
+                        </div>
+
+                        <div class="time_hight_school" ng-hide="editorEnabledtime_hight_school">
+                            <table>
+                                <col width="280">
+                                <col width=" 50">
+                                <tr>
+                                    <td>
+                                        <h4>{{time_hight_school}}</h4>
+                                    </td>
+                                    <td>
+                                        <a href="#stay_here" ng-click="enableEditortime_hight_school()"><u>Edit</u></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="time_hight_school" ng-show="editorEnabledtime_hight_school">
+                            <input ng-model="editabletime_hight_school" ng-show="editorEnabledtime_hight_school" class="input-size">
+                            <a href="#stay_here" ng-click="savetime_hight_school()">Save</a> or <a href="#stay_here" ng-click="disableEditortime_hight_school()">cancel</a>.
+                        </div>
+
+
+					</div>
+					
+					<div class = "col-md-3">
+						<img src = "images/thptLongThanh.jpg" width = "100" height = "100" alt "logo"/>
+					</div>
+				</div>
+				<div class = "student-live-description">
+                    <div class="content_hight_school" ng-hide="editorEnabledcontent_hight_school">
+                        <p>{{content_hight_school}}</p>
+                        <a href="#stay_here" ng-click="enableEditorcontent_hight_school()"><u>Edit</u></a>
+
+
+
+                    </div>
+                    <div class="content_hight_school" ng-show="editorEnabledcontent_hight_school">
+                        <input ng-model="editablecontent_hight_school" ng-show="editorEnabledcontent_hight_school" class="input-size">
+                        <a href="#stay_here" ng-click="savecontent_hight_school()">Save</a> or <a href="#stay_here" ng-click="disableEditorcontent_hight_school()">cancel</a>.
+                    </div>
+				</div>
+			</div>
+
+		<div class = "badminton-player">
+				<div class = "badminton-live">
+					<div class = "col-md-9">
+                        <div class="part_badminton" ng-hide="editorEnabledpart_badminton">
+                            <table>
+                                <col width="280">
+                                <col width=" 50">
+                                <tr>
+                                    <td>
+                                        <h4>{{part_badminton}}</h4>
+                                    </td>
+                                    <td>
+                                        <a href="#stay_here" ng-click="enableEditorpart_badminton()"><u>Edit</u></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="part_badminton" ng-show="editorEnabledpart_badminton">
+                            <input ng-model="editablepart_badminton" ng-show="editorEnabledpart_badminton" class="input-size">
+                            <a href="#stay_here" ng-click="savepart_badminton()">Save</a> or <a href="#stay_here" ng-click="disableEditorpart_badminton()">cancel</a>.
+                        </div>
+                        <div class="with_badminton" ng-hide="editorEnabledwith_badminton">
+                            <table>
+                                <col width="280">
+                                <col width=" 50">
+                                <tr>
+                                    <td>
+                                        <h5>{{with_badminton}}</h5>
+                                    </td>
+                                    <td>
+                                        <a href="#stay_here" ng-click="enableEditorwith_badminton()"><u>Edit</u></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="with_badminton" ng-show="editorEnabledwith_badminton">
+                            <input ng-model="editablewith_badminton" ng-show="editorEnabledwith_badminton" class="input-size">
+                            <a href="#stay_here" ng-click="savewith_badminton()">Save</a> or <a href="#stay_here" ng-click="disableEditorwith_badminton()">cancel</a>.
+                        </div>
+
+                        <div class="time_badminton" ng-hide="editorEnabledtime_badminton">
+                            <table>
+                                <col width="280">
+                                <col width=" 50">
+                                <tr>
+                                    <td>
+                                        <h6>{{time_badminton}}</h6>
+                                    </td>
+                                    <td>
+                                        <a href="#stay_here" ng-click="enableEditortime_badminton()"><u>Edit</u></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="time_badminton" ng-show="editorEnabledtime_badminton">
+                            <input ng-model="editabletime_badminton" ng-show="editorEnabledtime_badminton" class="input-size">
+                            <a href="#stay_here" ng-click="savetime_badminton()">Save</a> or <a href="#stay_here" ng-click="disableEditortime_badminton()">cancel</a>.
+                        </div>
+                        
+					</div>
+					
+					<div class = "col-md-3">
+						<img src = "images/badminton.jpg" width = "100" height = "100" alt "logo"/>
+					</div>
+				</div>
+				<div class = "student-live-description">
+                    <div class="content_badminton" ng-hide="editorEnabledcontent_badminton">
+                        
+                                    <p>{{content_badminton}}</p> 
+                                
+                                    <a href="#stay_here" ng-click="enableEditorcontent_badminton()"><u>Edit</u></a>
+                                
+
+
+
+                    </div>
+                    <div class="content_badminton" ng-show="editorEnabledcontent_badminton">
+                        <input ng-model="editablecontent_badminton" ng-show="editorEnabledcontent_badminton" class="input-size">
+                        <a href="#stay_here" ng-click="savecontent_badminton()">Save</a> or <a href="#stay_here" ng-click="disableEditorcontent_badminton()">cancel</a>.
+                    </div>
+				
+				</div>
+			</div>
+			
+					<div class = "guitar-player">
+				<div class = "badminton-live">
+					<div class = "col-md-9">
+                        <div class="part_guitar" ng-hide="editorEnabledpart_guitar">
+                            <table>
+                                <col width="280">
+                                <col width=" 50">
+                                <tr>
+                                    <td>
+                                        <h4>{{part_guitar}}</h4>
+                                    </td>
+                                    <td>
+                                        <a href="#stay_here" ng-click="enableEditorpart_guitar()"><u>Edit</u></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="part_guitar" ng-show="editorEnabledpart_guitar">
+                            <input ng-model="editablepart_guitar" ng-show="editorEnabledpart_guitar" class="input-size">
+                            <a href="#stay_here" ng-click="savepart_guitar()">Save</a> or <a href="#stay_here" ng-click="disableEditorpart_guitar()">cancel</a>.
+                        </div>
+                        <div class="with_guitar" ng-hide="editorEnabledwith_guitar">
+                            <table>
+                                <col width="280">
+                                <col width=" 50">
+                                <tr>
+                                    <td>
+                                        <h5>{{with_guitar}}</h5>
+                                    </td>
+                                    <td>
+                                        <a href="#stay_here" ng-click="enableEditorwith_guitar()"><u>Edit</u></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="with_guitar" ng-show="editorEnabledwith_guitar">
+                            <input ng-model="editablewith_guitar" ng-show="editorEnabledwith_guitar" class="input-size">
+                            <a href="#stay_here" ng-click="savewith_guitar()">Save</a> or <a href="#stay_here" ng-click="disableEditorwith_guitar()">cancel</a>.
+                        </div>
+
+                        <div class="time_guitar" ng-hide="editorEnabledtime_guitar">
+                            <table>
+                                <col width="280">
+                                <col width=" 50">
+                                <tr>
+                                    <td>
+                                        <h6>{{time_guitar}}</h6>
+                                    </td>
+                                    <td>
+                                        <a href="#stay_here" ng-click="enableEditortime_guitar()"><u>Edit</u></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+                        <div class="time_guitar" ng-show="editorEnabledtime_guitar">
+                            <input ng-model="editabletime_guitar" ng-show="editorEnabledtime_guitar" class="input-size">
+                            <a href="#stay_here" ng-click="savetime_guitar()">Save</a> or <a href="#stay_here" ng-click="disableEditortime_guitar()">cancel</a>.
+                        </div>
+
+					</div>
+					
+					<div class = "col-md-3">
+						<img src = "images/guitar.png" width = "100" height = "100" alt "logo"/>
+					</div>
+				</div>
+				<div class = "student-live-description">
+                    <div class="content_guitar" ng-hide="editorEnabledcontent_guitar">
+
+                        <p>{{content_guitar}}</p>
+
+                        <a href="#stay_here" ng-click="enableEditorcontent_guitar()"><u>Edit</u></a>
+
+
+
+
+                    </div>
+                    <div class="content_guitar" ng-show="editorEnabledcontent_guitar">
+                        <input ng-model="editablecontent_guitar" ng-show="editorEnabledcontent_guitar" class="input-size">
+                        <a href="#stay_here" ng-click="savecontent_guitar()">Save</a> or <a href="#stay_here" ng-click="disableEditorcontent_guitar()">cancel</a>.
+                    </div>
+				</div>
+			</div>
+
+			
+			<hr>
+		<div class = "Volunteer">
+			<div id = "title volunteer">
+				<table>
+						<col width = "30">
+						<col width = "500">
+						<tr>
+						<td>
+						<img src = "images/square.png" alt "symbol">
+						</td>
+						<td>
+						<h3>
+							Volunteer Experience & Causes 
+						</h3>
+						</td>
+						</tr>
+						</table>
+			</div>
+			
+			<div class = "cause">
+                <div class="title_care_about" ng-hide="editorEnabledtitle_care_about">
+
+                    <h4>{{title_care_about}}</h4>
+
+                    <a href="#stay_here" ng-click="enableEditortitle_care_about()"><u>Edit</u></a>
+
+
+
+
+                </div>
+                <div class="title_care_about" ng-show="editorEnabledtitle_care_about">
+                    <input ng-model="editabletitle_care_about" ng-show="editorEnabledtitle_care_about" class="input-size">
+                    <a href="#stay_here" ng-click="savetitle_care_about()">Save</a> or <a href="#stay_here" ng-click="disableEditortitle_care_about()">cancel</a>.
+                </div>
+				
+				<div id = "cause-content">
+					<ul>
+                        <li>
+                        <div class="Num_1_care_about" ng-hide="editorEnabledNum_1_care_about">
+                            <h5>{{Num_1_care_about}}</h5>
+                            <a href="#stay_here" ng-click="enableEditorNum_1_care_about()"><u>Edit</u></a>
+                            
+
+                        </div>
+                        <div class="Num_1_care_about" ng-show="editorEnabledNum_1_care_about">
+                            <input ng-model="editableNum_1_care_about" ng-show="editorEnabledNum_1_care_about" class="input-size">
+                            <a href="#stay_here" ng-click="saveNum_1_care_about()">Save</a> or <a href="#stay_here" ng-click="disableEditorNum_1_care_about()">cancel</a>.
+                        </div>
+                            </li>
+                        <li>
+                        <div class="Num_2_care_about" ng-hide="editorEnabledNum_2_care_about">
+                            
+                                        <h5>{{Num_2_care_about}}</h5>
+                            
+                                        <a href="#stay_here" ng-click="enableEditorNum_2_care_about()"><u>Edit</u></a>
+                            
+
+
+                        </div>
+                        <div class="Num_2_care_about" ng-show="editorEnabledNum_2_care_about">
+                            <input ng-model="editableNum_2_care_about" ng-show="editorEnabledNum_2_care_about" class="input-size">
+                            <a href="#stay_here" ng-click="saveNum_2_care_about()">Save</a> or <a href="#stay_here" ng-click="disableEditorNum_2_care_about()">cancel</a>.
+                        </div>
+
+                        </li>
+                        <li>
+                        <div class="Num_3_care_about" ng-hide="editorEnabledNum_3_care_about">
+                            
+                                        <h5>{{Num_3_care_about}}</h5>
+                            
+                                        <a href="#stay_here" ng-click="enableEditorNum_3_care_about()"><u>Edit</u></a>
+                            
+
+
+                        </div>
+                        <div class="Num_3_care_about" ng-show="editorEnabledNum_3_care_about">
+                            <input ng-model="editableNum_3_care_about" ng-show="editorEnabledNum_3_care_about" class="input-size">
+                            <a href="#stay_here" ng-click="saveNum_3_care_about()">Save</a> or <a href="#stay_here" ng-click="disableEditorNum_3_care_about()">cancel</a>.
+                        </div>
+                            </li>
+                        
+                        
+
+					</ul>
+				</div>
+			</div>
+			
+			<div class = "organizations">
+
+                <div class="title_join" ng-hide="editorEnabledtitle_join">
+
+                    <h4>{{title_join}}</h4>
+
+                    <a href="#stay_here" ng-click="enableEditortitle_join()"><u>Edit</u></a>
+
+
+
+
+                </div>
+                <div class="title_join" ng-show="editorEnabledtitle_join">
+                    <input ng-model="editabletitle_join" ng-show="editorEnabledtitle_join" class="input-size">
+                    <a href="#stay_here" ng-click="savetitle_join()">Save</a> or <a href="#stay_here" ng-click="disableEditortitle_join()">cancel</a>.
+                </div>
+				<div id = "organizations-content">
+					<ul>
+
+                        <li>
+                            <div class="Num_1_join" ng-hide="editorEnabledNum_1_join">
+                                <a href="#stay_here">{{Num_1_join}}</a>
+                                <a  href="#stay_here" ng-click="enableEditorNum_1_join()"><u>Edit</u></a>
+
+
+                            </div>
+                            <div class="Num_1_join" ng-show="editorEnabledNum_1_join">
+                                <input ng-model="editableNum_1_join" ng-show="editorEnabledNum_1_join" class="input-size">
+                                <a href="#stay_here" ng-click="saveNum_1_join()">Save</a> or <a href="#stay_here" ng-click="disableEditorNum_1_join()">cancel</a>.
+                            </div>
+                        </li>
+                        <li>
+                            <div class="Num_2_join" ng-hide="editorEnabledNum_2_join">
+
+                                <a href="#stay_here">{{Num_2_join}}</a>
+                                <a href="#stay_here" ng-click="enableEditorNum_2_join()"><u>Edit</u></a>
+
+
+
+                            </div>
+                            <div class="Num_2_join" ng-show="editorEnabledNum_2_join">
+                                <input ng-model="editableNum_2_join" ng-show="editorEnabledNum_2_join" class="input-size">
+                                <a href="#stay_here" ng-click="saveNum_2_join()">Save</a> or <a href="#stay_here" ng-click="disableEditorNum_2_join()">cancel</a>.
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="Num_3_join" ng-hide="editorEnabledNum_3_join">
+
+                                <a href="#stay_here">{{Num_3_join}}</a>
+                                <a href="#stay_here" ng-click="enableEditorNum_3_join()"><u>Edit</u></a>
+
+
+
+                            </div>
+                            <div class="Num_3_join" ng-show="editorEnabledNum_3_join">
+                                <input ng-model="editableNum_3_join" ng-show="editorEnabledNum_3_join" class="input-size">
+                                <a href="#stay_here" ng-click="saveNum_3_join()">Save</a> or <a href="#stay_here" ng-click="disableEditorNum_3_join()">cancel</a>.
+                            </div>
+                        </li>
+							
+					</ul>		
+				</div>		
+			</div>
+		</div>
+		<hr>
+		
+		<div class = "Skill">
+			<div id = "title-education">
+				<table>
+						<col width = "30">
+						<col width = "80">
+						<tr>
+						<td>
+						<img src = "images/square.png" alt "symbol">
+						</td>
+						<td>
+						<h3>
+							Skill
+						</h3>
+						</td>
+						</tr>
+						</table>
+			</div>
+			<div id = "top-skill">
+				<h5>{{title_top_skill}}</h5>
+			</div>
+			<div class = "skill-content">
+				
+				<ul>
+					<li><a href="#stay_here">{{Num_1_top_skill}}</a></li>
+					<li><a href="#stay_here">{{Num_2_top_skill}}</a></li>
+					<li><a href="#stay_here">{{Num_3_top_skill}}</a></li>
+					<li><a href="#stay_here">{{Num_4_top_skill}}</a></li>
+					<li><a href="#stay_here">{{Num_5_top_skill}}</a></li>
+					<li><a href="#stay_here">{{Num_6_top_skill}}</a></li>
+				  </ul>
+								
+				</div>
+				
+			</div>
+			
+			<div id = "other-skill">
+				<h5>{{title_other_skill}}</h5>
+				<div id "list-other skill">
+					<div class = "col-md-6">
+						<ul>
+							<li><a href="#stay_here">{{Num_1_other_skill}}</a></li>
+							<li><a href="#stay_here">{{Num_2_other_skill}}</a></li>
+						</ul>		
+					</div>
+					
+					<div class = "col-md-6">
+						<ul>
+							<li><a href="#stay_here">{{Num_3_other_skill}}</a></li>
+							<li><a href="#stay_here">{{Num_4_other_skill}}</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div id = "other-skill-content">
+			</div>
+			
+			
+		</div>
+		
+		<div class = "Education">
+			<div id = "title-education">
+				<table>
+						<col width = "30">
+						<col width = "80">
+						<tr>
+						<td>
+						<img src = "images/square.png" alt "symbol">
+						</td>
+						<td>
+						<h3>
+							Education 
+						</h3>
+						</td>
+						</tr>
+						</table>
+			</div>
+			<div class = "col-md-9">
+				<h4>{{university_education}}</h4>
+				<h5>{{degree_education}}</h5>
+				<h5>{{major_falcuty_education}}</h5>
+				<h5>{{time_education}}</h5>
+			</div>
+			
+			<div class = "col-md-3">
+			<img src="images/logo-khtn.png" alt="" width="100" height="100" border="0"/>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+		
