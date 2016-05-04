@@ -1,0 +1,140 @@
+body
+{
+	background-image: url("images/bg-body.png");
+	width: 1330px;
+	height: 4000px;
+}
+body .Entire
+{
+	background-color: white;
+	margin: 10px 180px 2px 180px;
+	height: 4000px;
+}
+.Content{
+	background-color: #F5F5F5;
+	border: 1px solid red;
+	
+}
+
+
+#top-card
+{
+	height: 300px;
+	vertical-align: middle;
+	border: none;
+}
+.profile-top-card{
+	height: 400px;
+}
+
+.profile-card-extras{
+	margin-top: 5px;
+	height: 50px;
+}
+.connect{
+	margin-left: 20px;
+}
+.profile-background h2{
+	margin-top:0px;
+	margin-bottom :0px;
+	margin-left: 0px;
+	margin-right:0px;
+	padding-top: 9px;
+	padding-bottom: 7px;
+	padding-left: 20px;
+	padding-right:20px;
+	background: #333;
+	color:#fff;
+	font-size:13px;
+	line-height: 17px;
+	font-weight:bold;
+	vertical-align: top;
+	word-wrap: normal;
+	width : 120px;
+}
+
+.summary-header{
+	padding-top: 0px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-weight: normal;
+	line-height:18px;
+	color: #434649;
+}
+.summary-description{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#see-more{
+	
+	margin-top: 30px;
+	margin-left: 450px;
+	
+}
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-style: inset;
+    border-width: 1px;
+}
+#title-experience{
+	margin-left: 30px;
+	
+}
+.picture{
+	margin-bottom: 30px;
+	
+}
+.picture:hover{
+	-moz-box-shadow: 0 0 10px #ccc;
+	-webkit-box-shadow: 0 0 10px #ccc;
+	box-shadow: 0 0 10px #ccc;
+}
+.pictures-list1{
+	margin-bottom: 30px;
+}
+.pictures-list2{
+	padding-top: 50px;
+	margin-top: 50px;
+}
+
+#title-education{
+	margin-left: 15px;
+}
+.Volunteer{
+	margin-left: 10px;
+}
+.student-live{
+	margin-top: 40px;
+	margin-left: 20px;
+}
+.student-live-description{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left:15px;
+	margin-right: 500px;
+}
+.badminton-player{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left:0px;
+	margin-right: 30px;
+}
+.input-size{
+	width : 700px;
+}
+.info-table{
+	height: 100px;
+}
+u{
+	color: green;
+}
+h4, h5{
+	display: inline-block;;
+}
