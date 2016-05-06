@@ -1,0 +1,4 @@
+http://www.w3schools.com/bootstrap/
+http://www.w3schools.com/angular/angular_http.asp
+https://docs.angularjs.org/guide/expression
+https://docs.angularjs.org/api/ng/directive/ngShow
